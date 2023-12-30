@@ -1,0 +1,185 @@
+*
+{
+    box-sizing: border-box;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.topdiv
+{
+    border: 2px solid black;
+    width: 600px;
+}
+
+.topdiv>h1
+{
+    text-align: center;
+}
+
+.steps
+{
+    display: flex;
+    
+}
+
+.stepbox1 , .stepbox2 ,.stepbox3 
+{
+    border-bottom: 1px solid green;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 30px;
+    width: 180px;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.stepbox2
+{
+    border-bottom: 1px solid black;
+}
+
+.stepbox3
+{
+    border: none;
+}
+
+.slno1
+{
+    width: 30px;
+    justify-content: center;
+    height: 30px;
+    align-items: center;
+    background-color: lightgreen;
+    border-radius: 30px;
+    position: relative;
+}
+
+.slno1 i
+{
+    position: absolute;
+    color: white;
+    top: -14px;
+    left: 7px;
+}
+
+.slno2
+{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-radius: 30px;
+    color: white;
+    position: relative;
+}
+
+.slno3
+{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-radius: 30px;
+    color: white;
+    position: relative;
+    opacity: 0.3;
+}
+
+.slno3~h5
+{
+    opacity: 0.3;
+}
+
+
+h5
+{
+    width: 60%;
+    margin-right: 10px;
+}
+
+.detailsbox
+{
+    box-shadow: 0px 6px 20px -6px black;
+    /* border: 2px solid black; */
+    width: 500px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.db1
+{
+    width: 300px;
+    height: 100px;
+    text-align: center;
+}
+
+.db1 h3
+{
+    color: gray;
+}
+
+.db1 h2
+{
+    margin-top: -25px;
+}
+
+.productimages
+{
+    width: 300px;
+    height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: -20px;
+}
+
+.productimages img
+{
+    width: 55px;
+    height: 80px;
+}
+
+.details
+{
+    width: 300px;
+    height: 200px;
+    margin-top: -40px;
+    /* text-align: center; */
+}
+
+.details span
+{
+    color: black;
+}
+
+.details h3
+{
+    color: grey;
+    font-size: 14px;
+}
+
+.btndiv
+{
+    text-align: center;
+}
+
+.btndiv button
+{
+    background-color: black;
+    color: white;
+    width: 150px;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+}
