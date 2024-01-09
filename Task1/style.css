@@ -1,0 +1,47 @@
+*
+{
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+}
+
+.pincode-checker
+{
+    margin: 30px auto;
+    width: 30%;
+    height: 40px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.pincodeInput
+{
+    width: 80%;
+    height: 90%;
+    font-size: 16px;
+    border: .5px solid black;
+    border-radius: 20px;
+}
+
+.pincodeButton
+{
+    width: 30px;
+    height: 28px;
+    border: 1px solid black;
+    border-radius: 20px;
+    position: relative;
+    left: -37px;
+    top: 4px;
+}
+
+.pincodeMessage
+{
+    width: 30%;
+    color: green;
+    font-size: 14px;
+}
+
+.pincodeMessage small
+{
+    color: black;
+}
