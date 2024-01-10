@@ -103,7 +103,7 @@
                             this.message.innerHTML=`
                             <small>Estimated Delivery</small>
                             <br>
-                            Enter valid pincode`
+                            <p>Enter valid pincode</p>`
                         }
                     }
                 }
@@ -112,7 +112,7 @@
                     return this.message.innerHTML=`
                     <small>Estimated Delivery</small>
                     <br>
-                    Enter valid pincode`
+                    <p>Enter valid pincode</p>`
                 }
             }
     }
