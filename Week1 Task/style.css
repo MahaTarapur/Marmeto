@@ -66,7 +66,7 @@
     text-align: center;
 }
 
-.productsdiv
+.productsdiv, .cartproductsdiv
 {
     /* border: 2px solid green; */
     width: 90%;

@@ -19,7 +19,6 @@ async function getProductsData()
                         <div class="left">
                             <h4>${name}</h4>
                             <h5>${price}</h5>
-                            <h6>${quantity}</h6>
                         </div>
                         <div class="right">
                         <button onclick="addProduct(${id})"class="btn">
@@ -51,30 +50,66 @@ function addProduct(id)
     {
         if(p.id==getSingleProduct.id)
         {
-            cart.push(p)
+            console.log("p1");
+            if(cart.length==0)
+            {
+                console.log("pl");
+                return cart.push(p)
+            }
+            cart.find((cp)=>
+                {
+                    console.log(cp.id);
+                    console.log(p.id);
+                    console.log(getSingleProduct.id);
+                    if(cp.id==getSingleProduct.id)
+                    {
+                        console.log("cp1");
+                        return cp.quantity+=1
+                    }
+                })
+            }
+            else
+            {
+                console.log("cp2");
+                return cart.push(p)
+            }       
         }
     })
-
-        // products.find((product)=>
-        // {
-        //     if(product.id==getSingleProduct.id)
-        //     {
-        //         cart.find((cartproduct)=>
-        //         {
-        //             if(cartproduct.id==getSingleProduct.id)
-        //             {
-        //                 cartproduct.quantity+=1
-        //             }
-        //             else
-        //             {
-        //                 cart.push(cartproduct)
-        //             }
-        //         })
-        //     }
-        //     else
-        //     {
-        //         return cart.push(product)
-        //     }
-        // })
+    cartproductsdiv.innerHTML=""
     console.log(cart);
+    getCartProductsData()
+}
+
+let cartproductsdiv=document.querySelector(".cartproductsdiv")
+
+async function getCartProductsData()
+{
+    try
+    {
+        cart.map(({id,name,image,price,quantity})=>
+        {
+            cartproductsdiv.innerHTML+=`
+            <div class="productcard" id=${id}>
+                    <div class="imgdiv">
+                        <img src=${image} alt="">
+                    </div>
+                    <div class="detailsdiv">
+                        <div class="left">
+                            <h4>${name}</h4>
+                            <h5>${price}</h5>
+                        </div>
+                        <div class="right">
+                        <button onclick="addProduct(${id})"class="btn">
+                        <i>${quantity}</i>
+                        </button>
+                        </div>
+                    </div>
+                </div>
+            `
+        })
+    }
+    catch(err)
+    {
+        console.log(err.message);
+    }
 }

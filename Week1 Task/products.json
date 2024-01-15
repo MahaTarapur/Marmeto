@@ -4,55 +4,55 @@
         "name":"Snowy Elegance Chair",
         "image":"./productsimage/img1.png",
         "price":2000,
-        "quantity":0
+        "quantity":1
     },
     {
         "id":2,
         "name":"Rose Noir Lounge Chair",
         "image":"./productsimage/img2.png",
         "price":5000,
-        "quantity":0
+        "quantity":1
     },
     {
         "id":3,
         "name":"Citrus Cube Chair",
         "image":"./productsimage/img3.png",
         "price":3000,
-        "quantity":0
+        "quantity":1
     },
     {
         "id":4,
         "name":"Ivory Royale Throne Chair",
         "image":"./productsimage/img4.png",
         "price":9000,
-        "quantity":0
+        "quantity":1
     },
     {
         "id":5,
         "name":"SpinMaster Tripod Chair",
         "image":"./productsimage/img5.png",
         "price":7000,
-        "quantity":0
+        "quantity":1
     },
     {
         "id":6,
         "name":"Minimalist Wood Haven Chair",
         "image":"./productsimage/img6.png",
         "price":5000,
-        "quantity":0
+        "quantity":1
     },
     {
         "id":7,
         "name":"Ebony Cap Lounge Chair",
         "image":"./productsimage/img7.png",
         "price":2000,
-        "quantity":0
+        "quantity":1
     },
     {
         "id":8,
         "name":"Pure Elegance Chair",
         "image":"./productsimage/img8.png",
         "price":1000,
-        "quantity":0
+        "quantity":1
     }
 ]
