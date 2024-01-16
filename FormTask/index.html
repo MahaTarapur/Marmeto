@@ -8,61 +8,64 @@
 </head>
 <body>
     
-<form action="">
-<h2>User Registration Form with Validation</h2>
-
-    <div class="un">
-        <input type="text" name="un" id="un" placeholder="Username" value="">
-        <br>
-        <small id="unError"></small>
-    </div>
-    <div class="email">
-        <input type="text" name="email" id="email" placeholder="Email" value="">
-        <br>
-        <small id="emailError"></small>
-    </div>
-    <div class="pwd">
-        <input type="password" name="pwd" id="pwd" placeholder="password" value="">
-        <br>
-        <small id="pwdError"></small>
-    </div>
-    <div class="cpwd">
-        <input type="password" name="cpwd" id="cpwd" placeholder="confirm password" value="">
-        <br>
-        <small id="cpwdError"></small>
-    </div>
-    <div class="dob">
-        <input type="date" name="" id="dob" value="">
-        <br>
-        <small id="dobError"></small>
-    </div>
-    <div class="gender">
-        <label for="" id="gender">Gender:</label>
-        <input type="radio" name="gender" id="Male" value="Male"> <label for="Male">Male</label>
-        <input type="radio" name="gender" id="Female" value="Female"> <label for="Female">Female</label>
-        <input type="radio" name="gender" id="Others" value="Others"> <label for="Others">Others</label>
-        <br>
-        <small id="genderError"></small>
-    </div>
-    <div class="country">
-        <label for="">Country</label>
-            <select name="country" id="country">
-                <option value="India">India</option>
-                <option value="Maldives">Maldives</option>
-                <option value="Nepal">Nepal</option>
-                <option value="China">China</option>
-        </select>
-    </div>
-    <div class="tc">
-        <label for="" id="tc">I accept the terms and conditions</label> <input id="checkbox" type="checkbox" name="checkbox">
-        <br>
-        <small id="checkboxError"></small>
-    </div>
+<div class="mainBox">
+    <form action="">
     
-</form>
-
-<div class="btn">
-    <button type="submit" onclick="submitform(event)">Submit</button>
+        <h2>User Registration Form with Validation</h2>
+    
+        <div class="un">
+            <input type="text" name="un" id="un" placeholder="Username" value="">
+            <br>
+            <small id="unError"></small>
+        </div>
+        <div class="email">
+            <input type="text" name="email" id="email" placeholder="Email" value="">
+            <br>
+            <small id="emailError"></small>
+        </div>
+        <div class="pwd">
+            <input type="password" name="pwd" id="pwd" placeholder="password" value="">
+            <br>
+            <small id="pwdError"></small>
+        </div>
+        <div class="cpwd">
+            <input type="password" name="cpwd" id="cpwd" placeholder="confirm password" value="">
+            <br>
+            <small id="cpwdError"></small>
+        </div>
+        <div class="dob">
+            <input type="date" name="" id="dob" value="" min="<?= date('Y-m-d') ?>">
+            <br>
+            <small id="dobError"></small>
+        </div>
+        <div class="gender">
+            <label for="" id="gender">Gender:</label>
+            <input type="radio" name="gender" id="Male" value="Male"> <label for="Male">Male</label>
+            <input type="radio" name="gender" id="Female" value="Female"> <label for="Female">Female</label>
+            <input type="radio" name="gender" id="Others" value="Others"> <label for="Others">Others</label>
+            <br>
+            <small id="genderError"></small>
+        </div>
+        <div class="country">
+            <label for="">Country</label>
+                <select name="country" id="country">
+                    <option value="India">India</option>
+                    <option value="Maldives">Maldives</option>
+                    <option value="Nepal">Nepal</option>
+                    <option value="China">China</option>
+            </select>
+        </div>
+        <div class="tc">
+            <label for="" id="tc">I accept the terms and conditions</label> <input id="checkbox" type="checkbox" name="checkbox">
+            <br>
+            <small id="checkboxError"></small>
+        </div>
+        
+    </form>
+    
+    <div class="btn">
+        <button type="submit" onclick="validate(event)">Submit</button>
+    </div>
 </div>
 
 

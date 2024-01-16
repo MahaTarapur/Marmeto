@@ -1,14 +1,15 @@
 let checkbox=document.getElementById("checkbox")
 console.log(checkbox);
 let checkboxError=document.getElementById("checkboxError")
-
-function submitform(e)
+let displayData=false;
+function submitform()
 {
-    e.preventDefault();
-
+    console.log("sf");
     if (checkbox.checked)
     {
-        validate()
+        console.log("hi");
+        displayData=true
+        console.log(displayData);
     }
     else
     {
@@ -19,8 +20,15 @@ function submitform(e)
     }
 }
 
-function validate()
+    var currentDate = new Date();
+    currentDate.setDate(currentDate.getDate());
+    var minDate = currentDate.toISOString().split('T')[0];
+    document.getElementById('dob').max = minDate;
+
+function validate(e)
 {
+    e.preventDefault();
+
     let username=document.getElementById("un")
     let usernameValue=document.getElementById("un").value
     let email=document.getElementById("email")
@@ -31,6 +39,7 @@ function validate()
     let cpwdValue=document.getElementById("cpwd").value
     let dob=document.getElementById("dob")
     let dobValue=document.getElementById("dob").value
+    console.log(dobValue);
     let yob=dobValue.split("-").at(0)
     let date=new Date().getFullYear()
     let gender=document.getElementById("gender")
@@ -44,6 +53,7 @@ function validate()
     let genderError=document.getElementById("genderError")
 
     checkbox.style.borderColor="green"
+        submitform()
     checkboxError.style.display="none"
 
     if(usernameValue=="")
@@ -77,6 +87,7 @@ function validate()
     else
     {
         username.style.borderColor="green"
+        submitform()
         unError.style.display="none"
     }
 
@@ -98,6 +109,7 @@ function validate()
     else
     {
         email.style.borderColor="green"
+        submitform()
         emailError.style.display="none"
     }
     
@@ -118,6 +130,7 @@ function validate()
     else
     {
         pwd.style.borderColor="green"
+        submitform()
         pwdError.style.display="none"
     }
 
@@ -138,6 +151,7 @@ function validate()
     else
     {
         cpwd.style.borderColor="green"
+        submitform()
         cpwdError.style.display="none"
     }
 
@@ -158,44 +172,68 @@ function validate()
     else
     {
         dob.style.borderColor="green"
+        submitform()
         dobError.style.display="none"
     }
 
 
     var radioButtons = document.getElementsByName("gender");
     console.log(radioButtons);
-    for (var i = 0; i < radioButtons.length; i++) 
+    let selectedgender;
+    let genderValue;
+    function checkGender()
     {
-      if (radioButtons[i].checked) 
+        for (var i = 0; i < radioButtons.length; i++) 
         {
-            let genderValue=radioButtons[i].value
-            console.log(genderValue);
-            gender.style.borderColor="green"
-            return genderError.style.display="none"
+            genderValue=radioButtons[i].value
+        if (radioButtons[i].checked) 
+        {
+            return true;
         }
-      else
-        {
+    }
+    }
+    console.log(checkGender());
+
+    if(checkGender()==true)
+    {
+        
+        console.log(genderValue);
+        selectedgender=genderValue
+        gender.style.borderColor="green"
+        genderError.style.display="none"
+        submitform()
+    }
+    if(checkGender()!==true)
+    {
             gender.style.borderColor="red"
             genderError.style.display="block"
             genderError.style.color="red"
             genderError.innerText="Select Your Gender"
-        }
     }
 
     var selectedOption = country.options[country.selectedIndex];
     let countryValue=selectedOption.value
-    let displayinfo=document.querySelector(".displayinfo")
-    console.log(displayinfo);
-    displayinfo.innerHTML+=`
-    <h2>Form submitted successfully</h2>
-    <h3>Name:${usernameValue}</h3>
-    <br>
-    <h3>Email:${emailValue}</h3>
-    <br>
-    <h3>Date Of Birth:${dobValue}</h3>
-    <br>
-    <h3>Country:${countryValue}</h3>
 
-    `
+        let displayinfo=document.querySelector(".displayinfo")
+        console.log(displayinfo);
+        console.log(displayData);
 
+        if(displayData)
+        {
+        displayData=displayinfo.innerHTML=""
+        displayData=displayinfo.innerHTML+=`
+        <h2 style="color: green;">Form submitted successfully</h2>
+        <br>
+        <h3>Name:${usernameValue}</h3>
+        <br>
+        <h3>Email:${emailValue}</h3>
+        <br>
+        <h3>Gender:${selectedgender}</h3>
+        <br>
+        <h3>Date Of Birth:${dobValue}</h3>
+        <br>
+        <h3>Country:${countryValue}</h3>
+        `
+        }
+    
 }

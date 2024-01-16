@@ -46,35 +46,30 @@ function addProduct(id)
     console.log(products);
     console.log(cart);
 
-    products.find((p)=>
+    
+
+    let findProduct=products.find(p => 
     {
+        console.log(p);
+        if(cart.length==0)
+        {
+            return cart.push(p)
+        }
+        console.log(p.id);
+        console.log(getSingleProduct.id);
         if(p.id==getSingleProduct.id)
         {
-            console.log("p1");
-            if(cart.length==0)
-            {
-                console.log("pl");
-                return cart.push(p)
-            }
-            cart.find((cp)=>
+            
+            console.log(p);
+            cart.find(p=>
                 {
-                    console.log(cp.id);
-                    console.log(p.id);
-                    console.log(getSingleProduct.id);
-                    if(cp.id==getSingleProduct.id)
-                    {
-                        console.log("cp1");
-                        return cp.quantity+=1
-                    }
+                    return p.quantity+=1
                 })
-            }
-            else
-            {
-                console.log("cp2");
-                return cart.push(p)
-            }       
         }
     })
+
+
+    console.log(findProduct);
     cartproductsdiv.innerHTML=""
     console.log(cart);
     getCartProductsData()
@@ -113,3 +108,33 @@ async function getCartProductsData()
         console.log(err.message);
     }
 }
+
+// // Initialize an empty shopping cart object
+// const shoppingCart = {};
+
+// // Function to add a product to the cart
+// function addToCart(product, quantity = 1) {
+//     if (quantity <= 0) {
+//         console.log("Quantity should be greater than 0.");
+//         return;
+//     }
+
+//     if (shoppingCart.hasOwnProperty(product)) {
+//         // Product is already in the cart, increase the quantity
+//         shoppingCart[product] += quantity;
+//         console.log(`${quantity} ${product}(s) added to the cart. Total quantity for ${product}: ${shoppingCart[product]}`);
+//     } else {
+//         // Product is not in the cart, add it with the given quantity
+//         shoppingCart[product] = quantity;
+//         console.log(`${quantity} ${product}(s) added to the cart.`);
+//     }
+// }
+
+// // Example usage:
+// addToCart("Laptop", 2);
+// addToCart("Mouse", 1);
+// addToCart("Laptop", 3);  // Adding more laptops, quantity should increase
+
+// // Display the current contents of the cart
+// console.log("Current Cart Contents:");
+// console.log(shoppingCart);
