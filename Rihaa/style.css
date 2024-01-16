@@ -88,14 +88,14 @@ button::before
     height: 100%;
     z-index: -1;
     transform-origin: left;
-    transition: transform 1s;
+    transition: transform .3s;
     transform: scaleX(1);
 }
 
 .btn:hover::before
 {
     transform-origin: right;
-    transition: transform 1s;
+    transition: transform .3s;
     transform: scaleX(0);
 }
 
