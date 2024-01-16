@@ -10,6 +10,7 @@
     width: 50%;
     /* height: 400px; */
     border: 2px solid black;
+    border-radius: 6px;
     margin: 10px auto;
     position: relative;
 }
@@ -22,6 +23,12 @@ form
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+}
+
+form h2
+{
+    margin: 4px;
+    text-decoration: underline;
 }
 
 form div
@@ -66,12 +73,28 @@ form div
 .btn button
 {
     width: 70px;
-    height: 25px;
+    height: 30px;
+    background-color: green;
+    border: 4px double black;
+    border-radius: 6px;
+    outline: none;
+    color: white;
 }
 
-/* .displayinfo
+button:active
 {
-    position: absolute;
-    top: 100px;
-    right: 400px;
-} */
+    background-color: rgb(110, 203, 110);
+}
+
+.displayinfo
+{
+    width: 350px;
+    background-color:plum;
+    margin: 2px auto;
+    border-radius: 10px;
+}
+
+.tc
+{
+    margin-bottom: 35px;
+}

@@ -39,7 +39,6 @@ function validate(e)
     let cpwdValue=document.getElementById("cpwd").value
     let dob=document.getElementById("dob")
     let dobValue=document.getElementById("dob").value
-    console.log(dobValue);
     let yob=dobValue.split("-").at(0)
     let date=new Date().getFullYear()
     let gender=document.getElementById("gender")
@@ -62,6 +61,7 @@ function validate(e)
         unError.style.display="block"
         unError.style.color="red"
         unError.innerText="Username is mandatory"
+        return displayData=false        
     }
     else if(!/^[a-zA-Z0-9]+$/.test(usernameValue))
     {
@@ -69,6 +69,7 @@ function validate(e)
         unError.style.display="block"
         unError.style.color="red"
         unError.innerText="Username accepts only Alpanumericals"
+        return displayData=false        
     }
     else if(usernameValue.length<5)
     {
@@ -76,6 +77,7 @@ function validate(e)
         unError.style.display="block"
         unError.style.color="red"
         unError.innerText="Username should contain minimum 5 characters"
+        return displayData=false        
     }
     else if(usernameValue.length>15)
     {
@@ -83,6 +85,7 @@ function validate(e)
         unError.style.display="block"
         unError.style.color="red"
         unError.innerText="Username cannot contain more than 15 characters"
+        return displayData=false        
     }
     else
     {
@@ -98,6 +101,7 @@ function validate(e)
         emailError.style.display="block"
         emailError.style.color="red"
         emailError.innerText="email is mandatory"
+        return displayData=false        
     }
     else if(!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(emailValue))
     {
@@ -105,6 +109,7 @@ function validate(e)
         emailError.style.display="block"
         emailError.style.color="red"
         emailError.innerText="email is invalid"
+        return displayData=false        
     }
     else
     {
@@ -119,6 +124,7 @@ function validate(e)
         pwdError.style.display="block"
         pwdError.style.color="red"
         pwdError.innerText="Password is mandatory"
+        return displayData=false        
     }
     else if(!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d\S]{8,}$/.test(pwdValue))
     {
@@ -126,6 +132,7 @@ function validate(e)
         pwdError.style.display="block"
         pwdError.style.color="red"
         pwdError.innerText="Password must iclude a mix of uppercase, lowercase, numbers, and special characters"
+        return displayData=false        
     }
     else
     {
@@ -140,6 +147,7 @@ function validate(e)
         cpwdError.style.display="block"
         cpwdError.style.color="red"
         cpwdError.innerText="Confirm Password cannot be empty"
+        return displayData=false        
     }
     else if(pwdValue!=cpwdValue)
     {
@@ -147,6 +155,7 @@ function validate(e)
         cpwdError.style.display="block"
         cpwdError.style.color="red"
         cpwdError.innerText="Password does not match"
+        return displayData=false        
     }
     else
     {
@@ -161,6 +170,7 @@ function validate(e)
         dobError.style.display="block"
         dobError.style.color="red"
         dobError.innerText="Date of Birth cannot be empty"
+        return displayData=false        
     }
     else if((date-yob)<18)
     {
@@ -168,6 +178,7 @@ function validate(e)
         dobError.style.display="block"
         dobError.style.color="red"
         dobError.innerText="You are not 18+"
+        return displayData=false        
     }
     else
     {
@@ -209,12 +220,18 @@ function validate(e)
             genderError.style.display="block"
             genderError.style.color="red"
             genderError.innerText="Select Your Gender"
-    }
+            return displayData=false        
+        }
+
+    console.log(dobValue);
+    console.log(dobValue.split("-"));  
 
     var selectedOption = country.options[country.selectedIndex];
     let countryValue=selectedOption.value
 
         let displayinfo=document.querySelector(".displayinfo")
+        displayinfo.style.borderColor="black"
+        displayinfo.style.padding="4px"
         console.log(displayinfo);
         console.log(displayData);
 
