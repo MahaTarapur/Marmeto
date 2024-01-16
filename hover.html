@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Background Transition</title>
+    <style>
+        .background-transition-element {
+            width: 200px;
+            height: 100px;
+            background: linear-gradient(to right, red, blue); /* Initial gradient from red to blue */
+            background-size: 200% 100%; /* Double the width of the gradient */
+            transition: background-position 0.5s ease-in-out; /* Set the duration to 0.5 seconds with ease-in-out timing function */
+        }
+
+        /* Adjust the initial background position to start from the left */
+        .background-transition-element:hover {
+            background-position: -100% 0; /* Shift the gradient to the right on hover */
+        }
+    </style>
+</head>
+<body>
+
+<div class="background-transition-element">
+    Hover over me
+</div>
+
+</body>
+</html>
