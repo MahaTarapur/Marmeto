@@ -1,0 +1,188 @@
+.container
+{
+    width: 100%;
+    /* border: 2px solid black; */
+    padding: 0;
+    margin: 10px 0px 0px 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.splide::-webkit-scrollbar 
+{
+    display: none;
+}
+
+.splide__slide 
+{
+    text-align: center;
+    /* border: 1px solid blasck; */
+    width: 305px;
+    height: 380px;
+    box-sizing: border-box;
+}
+
+.splide 
+{
+    margin: 0 auto;
+    overflow: scroll;
+}
+
+ul.splide__list 
+{
+    display: inline-flex;
+    overflow: hidden;
+    gap: 10px;
+    padding: 0;
+    list-style-type: none;
+}
+
+.container>p
+{
+    color: #5749a6;
+    letter-spacing: 2px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.container>h2 
+{
+    font-size: 40px;
+    font-weight: 400;
+    margin: 0px;
+    margin-top: -15px;
+}
+
+.imgdiv
+{
+    width: 82%;
+    height: 65%;
+    margin: -130px auto 0px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.imgdiv img
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.details
+{
+    background-color: rgb(231,241,255);
+    border-radius: 20px;
+    padding: 2px 12px;
+    margin: 130px auto 0px;
+    height: 60%;
+}
+
+#middledetail
+{
+    background-color:rgb(234,245,223);
+}
+
+.points_firstchild
+{
+    font-size: 12px;
+    text-align: left;
+    color: gray;
+    font-weight: bold;
+}
+
+span
+{
+    margin-left: 12%;
+    font-weight: 400;
+}
+
+.points h3
+{
+    text-align: left;
+    font-weight: 500;
+    margin-top: -5px;
+    font-size: 18px;
+    color: black;
+}
+
+.content
+{
+    font-size: 12px;
+    text-align: left;
+    color: #3c3b3b;
+}
+
+.btn
+{
+    text-align: left;
+    font-size: 12px;
+    margin-top: 10px;
+    color: black;
+}
+
+@media only screen and (min-width: 1024px) 
+{
+    .container
+    {
+        width: 100%;
+    }
+    .container>p {
+        color: #5749a6;
+        letter-spacing: 2px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .container>h2 {
+        font-size: 70px;
+        font-weight: 400;
+        margin: 0px;
+        margin-top: -15px;
+    }
+    .splide__slide {
+        text-align: center;
+        width: 403px;
+        height: 507px;
+        box-sizing: border-box;
+    }
+    .imgdiv {
+        width: 90%;
+        height: 85%;
+        margin: -200px auto 0px;
+        padding: 10px;
+        border-radius: 15px;
+        background-color: white;
+    }
+    .imgdiv img{
+        border-radius: 20px;
+        height: 100%;
+    }
+
+    .details {
+        background-color: rgb(231,241,255);
+        border-radius: 20px;
+        padding: 2px 12px;
+        height: 50%;
+        margin: 190px auto 0px 
+    }
+    .points_firstchild {
+        font-size: 15px;
+        text-align: left;
+        color: gray;
+        font-weight: 700;
+    }
+    span {
+        margin-left: 19%;
+        font-weight: 400;
+    }
+    .content {
+        font-size: 16px;
+        text-align: left;
+    }
+    .btn {
+        text-align: left;
+        font-size: 16px;
+        margin-top: 10px;
+        color: black;
+    }
+}

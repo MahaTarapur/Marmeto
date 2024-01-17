@@ -1,0 +1,51 @@
+/* h1, h2, h3 {
+    color: #008080;
+  }
+  
+  .button {
+    background-color: #ff7f0e;
+  }
+  
+  .another-button {
+    background-color: #ff7f0e;
+  }
+   */
+/* 
+   :root {
+    --purple: #5e0080;
+    --orange: #ff7f0e;
+  }
+  
+  h1, h2, h3 {
+    color: var(--purple);
+  }
+  
+  .button, .another-button {
+    background-color: var(--orange);
+  } */
+
+
+  :root {
+    --teal: #008080;
+    --orange: #ff7f0e;
+  }
+
+  #my-element{
+    color: var(--teal);
+  }
+  
+  h1, h2, h3 {
+    color: var(--teal);
+  }
+  
+  .custom-section {
+      --orange: #fbb475;
+    background-color: var(--orange);
+  }
+  
+  @media only screen and (min-width: 750px) {
+      .custom-section {
+          --orange: #ff7800;
+        background-color: var(--orange);
+      }
+  }
