@@ -57,9 +57,10 @@ ul.splide__list
     width: 82%;
     height: 65%;
     margin: -130px auto 0px;
-    padding: 10px;
-    border-radius: 15px;
+    border-radius: 25px;
     background-color: white;
+    border: 10px solid white;
+    overflow: hidden;
 }
 
 .imgdiv img
@@ -67,6 +68,7 @@ ul.splide__list
     width: 100%;
     height: 100%;
     border-radius: 15px;
+    transition: all .5s;
 }
 
 .details
@@ -126,6 +128,12 @@ a
     text-decoration: none;
 }
 
+.imgdiv:hover img
+{
+    transform: scale(1.05);
+    /* border-radius: 25px; */
+}
+
 @media only screen and (min-width: 1024px) 
 {
     .container
@@ -154,15 +162,15 @@ a
         width: 90%;
         height: 85%;
         margin: -200px auto 0px;
-        padding: 10px;
+        border: 10px solid white;
         border-radius: 15px;
         background-color: white;
     }
     .imgdiv img{
         border-radius: 20px;
         height: 100%;
+        transition: all .5s;
     }
-
     .details {
         background-color: rgb(231,241,255);
         border-radius: 20px;
