@@ -121,6 +121,11 @@ span
     color: black;
 }
 
+a
+{
+    text-decoration: none;
+}
+
 @media only screen and (min-width: 1024px) 
 {
     .container
