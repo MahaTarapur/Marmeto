@@ -1,0 +1,50 @@
+#splide-container {
+    max-width: 1000px;
+    margin: 20px auto;
+    overflow: hidden;
+  }
+  
+  .splide__track {
+    display: flex;
+  }
+  
+  .splide__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    width: 100%;
+  }
+  
+  .splide__slide {
+    display: inline-block;
+    white-space: normal;
+    margin-right: 10px;
+    list-style-type: none ;
+  }
+  
+  .splide__slide img {
+    width: 100vw; /* Set image width to 100% of viewport width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+  }
+  
+  #splide {
+    max-width: 100%; /* Adjust as needed */
+    overflow: hidden;
+  }
+  
+  .splide__pagination__page {
+    width: 10px; /* Adjust the width of each bullet */
+    height: 15px; /* Adjust the height of each bullet */
+    margin: 0 5px; /* Add spacing between bullets */
+    cursor: pointer;
+    border-radius: 50%;
+  }
+
+  .splide__pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none ;
+  }

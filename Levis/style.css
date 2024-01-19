@@ -1,0 +1,30 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  width: 100vw;
+}
+
+.splide__list
+{
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  list-style-type: none;
+}
+
+img
+{
+  width: 100%;
+  height: auto;
+}
+
+.splide__slide img
+{
+  width: 100%;
+  height: auto;
+}
+
