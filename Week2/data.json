@@ -2,7 +2,7 @@
     "blocks":
     [
         {
-            "id":1,
+            "id":0,
             "background": "linear-gradient(105.54deg, #F4A764 -2.93%, #FFDEC2 72.14%)",
             "heading_text":"Exquisite Watches",
             "sub_heading_text":"Gold Luxury,<span>Choose Us</span>",
@@ -11,7 +11,7 @@
             "image_url":"./Images/Group 4.png"
         },
         {
-            "id":2,
+            "id":1,
             "background": "linear-gradient(105.54deg, #ADB0B0 -2.93%, #E1E1E1 72.14%)",
             "heading_text":"Dainty Timepieces",
             "sub_heading_text":"Silver Luxury,<span>Choose Us</span>",
@@ -20,7 +20,7 @@
             "image_url":"./Images/Group 5.png"
         },
         {
-            "id":3,
+            "id":2,
             "background": "linear-gradient(105.54deg, #30A357 -2.93%, #75E39A 72.14%)",
             "heading_text":"Elegant Timepieces",
             "sub_heading_text":"Choose Luxury,<span>Choose Us</span>",
@@ -29,7 +29,7 @@
             "image_url":"./Images/Group 6.png"
         },
         {
-            "id":4,
+            "id":3,
             "background": "linear-gradient(105.54deg, #F24F4F -2.93%, #FFA895 72.14%)",
             "heading_text":"Refined Timepieces",
             "sub_heading_text":"Choose Luxury, Choose Us",
