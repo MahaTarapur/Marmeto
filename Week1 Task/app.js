@@ -1,5 +1,6 @@
 let products;
 let productsdiv=document.querySelector(".productsdiv")
+let cartproductsdiv=document.querySelector(".cartproductsdiv")
 
 async function getProductsData()
 {
@@ -21,7 +22,7 @@ async function getProductsData()
                             <h5>${price}</h5>
                         </div>
                         <div class="right">
-                        <button onclick="addProduct(${id})"class="btn">
+                        <button onclick="addProduct(${id})" class="btn">
                         <i class="fa fa-cart-plus" aria-hidden="true"></i>
                         </button>
                         </div>
@@ -38,49 +39,46 @@ async function getProductsData()
 getProductsData()
 
 let cart=[]
-
-function addProduct(id)
+function addProduct(e)
 {
-    let getSingleProduct=document.getElementById(`${id}`)
-    console.log(getSingleProduct.id);
-    console.log(products);
+console.log(e);
+
+let finditem=products.find((item)=>
+{
+    if(item.id==e)
+    return item
+})
+let cartitem=cart.find((item)=>
+{
+    if(item.id==e)
+    return item
+})
+console.log(finditem);
+console.log(cartitem);
+if(finditem.id==e && cartitem?.id==undefined)
+{
+    console.log("hi");
+    cart.push(finditem)
     console.log(cart);
-
-    
-
-    let findProduct=products.find(p => 
-    {
-        console.log(p);
-        if(cart.length==0)
-        {
-            return cart.push(p)
-        }
-        console.log(p.id);
-        console.log(getSingleProduct.id);
-        if(p.id==getSingleProduct.id)
-        {
-            
-            console.log(p);
-            cart.find(p=>
-                {
-                    return p.quantity+=1
-                })
-        }
-    })
-
-
-    console.log(findProduct);
-    cartproductsdiv.innerHTML=""
+    addCartData()
+}
+else
+{
+    console.log("bye");
+    cartitem.quantity+=1
     console.log(cart);
-    getCartProductsData()
+    addCartData()
+}
 }
 
-let cartproductsdiv=document.querySelector(".cartproductsdiv")
 
-async function getCartProductsData()
+async function addCartData()
 {
+
     try
     {
+        cartproductsdiv.innerHTML=""
+        console.log(cart);
         cart.map(({id,name,image,price,quantity})=>
         {
             cartproductsdiv.innerHTML+=`
@@ -94,47 +92,36 @@ async function getCartProductsData()
                             <h5>${price}</h5>
                         </div>
                         <div class="right">
-                        <button onclick="addProduct(${id})"class="btn">
-                        <i>${quantity}</i>
-                        </button>
+                        <h3>${quantity}</h3>
                         </div>
                     </div>
                 </div>
             `
+        console.log(cart);
+        displayTotal()
         })
     }
     catch(err)
     {
         console.log(err.message);
     }
+
 }
 
-// // Initialize an empty shopping cart object
-// const shoppingCart = {};
+let total=document.querySelector(".total")
+console.log(total);
 
-// // Function to add a product to the cart
-// function addToCart(product, quantity = 1) {
-//     if (quantity <= 0) {
-//         console.log("Quantity should be greater than 0.");
-//         return;
-//     }
-
-//     if (shoppingCart.hasOwnProperty(product)) {
-//         // Product is already in the cart, increase the quantity
-//         shoppingCart[product] += quantity;
-//         console.log(`${quantity} ${product}(s) added to the cart. Total quantity for ${product}: ${shoppingCart[product]}`);
-//     } else {
-//         // Product is not in the cart, add it with the given quantity
-//         shoppingCart[product] = quantity;
-//         console.log(`${quantity} ${product}(s) added to the cart.`);
-//     }
-// }
-
-// // Example usage:
-// addToCart("Laptop", 2);
-// addToCart("Mouse", 1);
-// addToCart("Laptop", 3);  // Adding more laptops, quantity should increase
-
-// // Display the current contents of the cart
-// console.log("Current Cart Contents:");
-// console.log(shoppingCart);
+function displayTotal()
+{
+    let totalPrice=[]
+    let grandTotal;
+    cart.map((item)=>
+    {
+        totalPrice.push((item.quantity)*(item.price))
+    })
+    grandTotal=totalPrice.reduce((price)=>
+    {
+        return price
+    })
+    total.innerHTML=`<h1>${grandTotal}</h1>`
+}

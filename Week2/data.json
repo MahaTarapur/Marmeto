@@ -32,7 +32,7 @@
             "id":3,
             "background": "linear-gradient(105.54deg, #F24F4F -2.93%, #FFA895 72.14%)",
             "heading_text":"Refined Timepieces",
-            "sub_heading_text":"Choose Luxury, Choose Us",
+            "sub_heading_text":"Choose Luxury,<span>Choose Us</span>",
             "description":"Explore the Ideal Timepiece for Any Moment and Enhance Your Style with Timeless Sophistication and Impeccable Craftsmanship - timepiece",
             "price":"$599.00",
             "image_url":"./Images/Group 7.png"
